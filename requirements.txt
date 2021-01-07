@@ -17,4 +17,3 @@ certifi==2019.11.28
 itsdangerous==1.1.0
 
 
-lightgbm == 3.1.1
