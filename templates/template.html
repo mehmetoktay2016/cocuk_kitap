@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kitap Fiyat Tahmin Uygulaması</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	  <h1>Kitap Fiyat Tahmin Uygulaması</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="sayfa_sayisi" placeholder="Sayfa Sayısı" required="required" /><br>
+      <input type="text" name="satis_sayisi" placeholder="Toplam Satış Sayısı" required="required" /><br>
+      <input type="text" name="indirim_yuzdesi" placeholder="İndirim Yuzdesi" required="required" /><br>
+      <input type="text" name="puan" placeholder="Satıldıgında Verilecek Puan" required="required" /><br>
+      <input type="text" name="kazanc" placeholder="Kazanc(Musteriye yapılan indirim)" required="required" /><br>
+      <input type="text" name="yorum_sayisi" placeholder="Yapılan Yorum Sayısı" required="required" /><br>
+      <input type="text" name="toplam_gun" placeholder="Kaç Günden Beri Rafta" required="required" /><br>
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Fiyat Tahmini</button>
+    </form>
+
+   <br>
+   <br>
+
+
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
+
+
