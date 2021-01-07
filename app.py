@@ -39,7 +39,7 @@ def predict():
 
 
     # html çıktısına geri gondermek
-    return render_template('template.html', prediction_text='Kitap Fiyatı : {}'.format(predicted_y))
+    return render_template('template.html', prediction_text='Kitap Fiyatı : {} TL olmalı.'.format(predicted_y))
 
 
 
